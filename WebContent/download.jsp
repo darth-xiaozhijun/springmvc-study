@@ -8,5 +8,10 @@
 </head>
 <body>
 <a href="download?fileName=a.txt">下载</a>
+<form action="upload" enctype="multipart/form-data" method="post">
+	姓名:<input type="text" name="name"/><br/>
+	文件:<input type="file" name="file"/><br/>
+	<input type="submit" value="提交"/>
+</form>
 </body>
 </html>
