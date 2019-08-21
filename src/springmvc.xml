@@ -52,13 +52,14 @@
 		</property>
 	</bean>
 	<!-- 视图解析器 -->
-    <!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    	<property name="prefix" value="/"></property>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<!-- <property name="prefix" value="/"></property> -->
+    	<property name="prefix" value="/WEB-INF/page/"></property>
     	<property name="suffix" value=".jsp"></property>
-    </bean> -->
+    </bean>
     
     <!-- 拦截器 -->
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/intercept"/>
 			<bean class="com.geekshow.interceptor.DemoInterceptor"></bean>
@@ -67,5 +68,9 @@
 			<mvc:mapping path="/intercept"/>
 			<bean class="com.geekshow.interceptor.DemoInterceptor2"></bean>
 		</mvc:interceptor>
+	</mvc:interceptors> -->
+	<mvc:interceptors>
+		<bean class="com.geekshow.interceptor.LoginInterceptor"></bean>
 	</mvc:interceptors>
+	
 </beans>
