@@ -56,4 +56,16 @@
     	<property name="prefix" value="/"></property>
     	<property name="suffix" value=".jsp"></property>
     </bean> -->
+    
+    <!-- 拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/intercept"/>
+			<bean class="com.geekshow.interceptor.DemoInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/intercept"/>
+			<bean class="com.geekshow.interceptor.DemoInterceptor2"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
